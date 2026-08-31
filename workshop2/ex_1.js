@@ -42,5 +42,6 @@ const studentResults = studentsData.map((s) => {
 
 console.table(studentResults);
 
-console.log('Result 1:, calculateWorkshopScore(48));
-console.log('Result 2calculateWorkshopScore(48));
+  console.log('Result 1:', calculateWorkshopScore(48));
+console.log('Result 2:', calculateWorkshopScore(48, 60, 20));
+console.log('Result 3 (with undefined full):', calculateWorkshopScore(48, undefined, 25));
