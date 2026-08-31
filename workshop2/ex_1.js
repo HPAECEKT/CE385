@@ -25,6 +25,7 @@ function calculateTotal(workshop,attendance,project,midterm,final){
 }
 
 const studentsData = [
-  { name : 'Somchai', rwaWs: 48,att:10,proj:18,mid:22,final:25},
-  { name : 'Somchai', rwaWs: 48,att:10,proj:18,mid:22,final:25},
-]
+  { name: 'Somchai', rawWs: 48, att: 10, proj: 18, mid: 22, final: 25 },
+  { name: 'Somsri', rawWs: 30, att: 8, proj: 15, mid: 18, final: 12 },
+  { name: 'Somsak', rawWs: 58, att: 10, proj: 20, mid: 24, final: 23 }
+];
