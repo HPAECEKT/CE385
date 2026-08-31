@@ -29,3 +29,18 @@ const studentsData = [
   { name: 'Somsri', rawWs: 30, att: 8, proj: 15, mid: 18, final: 12 },
   { name: 'Somsak', rawWs: 58, att: 10, proj: 20, mid: 24, final: 23 }
 ];
+
+const studentResults = studentsData.map((s) => {
+  const wsScore = calculateWoekshopScore(s.rawWs);
+  const total = calculateTotal(wsScore, s.att, s.proj, s.mid, s.final);
+  return {
+    ชื่อ: s.name,
+    คะแนนรวม : total.tofixed(2),
+    เกรด: toGrade(total)
+  };
+};
+
+console.table(studentResults);
+
+console.log('Result 1:, calculateWorkshopScore(48));
+console.log('Result 2calculateWorkshopScore(48));
