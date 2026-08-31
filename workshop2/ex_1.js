@@ -31,17 +31,17 @@ const studentsData = [
 ];
 
 const studentResults = studentsData.map((s) => {
-  const wsScore = calculateWoekshopScore(s.rawWs);
+  const wsScore = calculateWorkshopScore(s.rawWs);
   const total = calculateTotal(wsScore, s.att, s.proj, s.mid, s.final);
   return {
     ชื่อ: s.name,
-    คะแนนรวม : total.tofixed(2),
+    คะแนนรวม: total.toFixed(2),
     เกรด: toGrade(total)
   };
-};
+});
 
 console.table(studentResults);
 
-  console.log('Result 1:', calculateWorkshopScore(48));
+console.log('Result 1:', calculateWorkshopScore(48));
 console.log('Result 2:', calculateWorkshopScore(48, 60, 20));
 console.log('Result 3 (with undefined full):', calculateWorkshopScore(48, undefined, 25));
