@@ -29,3 +29,16 @@ const getAverageScore = (students) => {
     const average = getTotalScore(students) / students.length;
     return Number(average.toFixed(2));
 }
+
+const countByGrade = (students) => {
+  return students.reduce((acc, student) => {
+    let grade = 'F';
+    if (student.score >= 80) grade = 'A';
+    else if (student.score >= 70) grade = 'B';
+    else if (student.score >= 60) grade = 'C';
+    else if (student.score >= 50) grade = 'D';
+
+    acc[grade] = (acc[grade] || 0) + 1;
+    return acc;
+  }, {});
+};
