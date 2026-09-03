@@ -1,4 +1,3 @@
-
 const initialStudents = [
   { id: '6001', name: 'Alice', major: 'CE', score: 85, contact: { email: 'alice@ce.ac.th', phone: '0811111111' } },
   { id: '6002', name: 'Bob', major: 'IT', score: 42, contact: { email: 'bob@it.ac.th', phone: '0822222222' } },
