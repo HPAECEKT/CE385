@@ -81,3 +81,8 @@ function calculateDiscount(price, callback) {
     callback(null, price * 0.9);
   }, 100);
 }
+
+const calculateDiscountAsync = promisify(calculateDiscount);
+calculateDiscountAsync(1000)
+  .then((discounted) => console.log("[Promisify Test] ราคาส่วนลด:", discounted))
+  .catch((err) => console.error("[Promisify Test] ผิดพลาด:", err.message));
