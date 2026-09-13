@@ -13,6 +13,7 @@ function toGrade(score) {
   return "F";
 }
 
+//แปลงเป็น Promise
 function fetchStudentByIdAsync(id) {
   return new Promise((resolve, reject) => {
     if (typeof id !== "string" || id.trim() === "") {
@@ -28,3 +29,19 @@ function fetchStudentByIdAsync(id) {
     }, 300);
   });
 }
+
+//เรียกใช้ 3 กรณีด้วย .then / .catch / .finally
+fetchStudentByIdAsync("6501")
+  .then((student) => console.log("[Promise Case 1] พบข้อมูล:", student))
+  .catch((err) => console.error("[Promise Case 1] ผิดพลาด:", err.message))
+  .finally(() => console.log("[Promise Case 1] เสร็จสิ้นการทำงาน"));
+
+fetchStudentByIdAsync("9999")
+  .then((student) => console.log("[Promise Case 2] พบข้อมูล:", student))
+  .catch((err) => console.error("[Promise Case 2] ผิดพลาด:", err.message))
+  .finally(() => console.log("[Promise Case 2] เสร็จสิ้นการทำงาน"));
+
+fetchStudentByIdAsync(42)
+  .then((student) => console.log("[Promise Case 3] พบข้อมูล:", student))
+  .catch((err) => console.error("[Promise Case 3] ผิดพลาด:", err.message))
+  .finally(() => console.log("[Promise Case 3] เสร็จสิ้นการทำงาน"));
